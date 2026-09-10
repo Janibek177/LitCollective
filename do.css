@@ -208,7 +208,7 @@ body {
     align-items: center;
 }
 .box{
-    background-color: white;
+    background: #fff;
     color: black;
     border-radius: 10px;
     width: 300px;
