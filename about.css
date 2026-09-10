@@ -1,0 +1,224 @@
+body {
+    background: black;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.about {
+    animation: fadeInMain 1.2s  forwards;
+}
+
+@keyframes fadeInMain {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+    animation: move 1s ease-out;
+}
+
+@keyframes move {
+    from { transform: translateY(-80px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo img {
+    height: 45px;
+    display: block;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+         opacity: 0.4; filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.2)); 
+    }
+    50% { 
+        opacity: 1; filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.8)); 
+    }
+}
+
+.link ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 200px;
+}
+
+.link ul li a {
+    color: #a3a3a3;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.link ul li a:hover {
+    color: #ffffff;
+}
+
+.home-icon {
+    color: #3b82f6;
+    margin-right: 4px;
+}
+
+.link ul > li {
+    position: relative; 
+}
+
+.droper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff !important;
+}
+
+.drop {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+}
+
+.link ul.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 100%;       
+    right: 0;        
+    left: auto;      
+    margin-top: 12px;
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    min-width: 120px;
+    padding: 6px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.link ul.dropdown li {
+    width: 100%;
+    position: static;
+}
+
+.link ul.dropdown li a {
+    display: block;
+    padding: 8px 16px;
+    color: #cccccc;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.link ul.dropdown li a:hover {
+    background-color: #1f1f1f;
+    color: #3b82f6;
+}
+
+.link ul > li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.link ul > li:hover .drop {
+    transform: rotate(180deg);
+}
+.about {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 10px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+    align-self: flex-start;
+    text-align: left;
+    margin-left: 24px;
+    margin-bottom: 10px;
+
+}
+
+.text h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+.about img{
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+
+}
+.aboutimg{
+    width: 450px;
+    height: 500px;
+    margin-top: -300px;
+    border-radius: 25px;
+    margin-left: 550px;
+}
+.aboutimg2{
+    margin-top: -130px;
+    margin-left: 900px;
+    border-radius: 25px;
+}
+.text2{
+    margin-left: -900px;
+    margin-top: -130px;
+}
+
+.aboutimg:hover {
+    transform: translateY(-8px) rotate(-1.5deg) scale(1.02);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+.aboutimg2:hover {
+    transform: translateY(-8px) rotate(1.5deg) scale(1.02);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: #777;
+    font-size: 14px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-socials a:hover {
+    color: #3b82f6;
+    transform: translateY(-2px);
+}
